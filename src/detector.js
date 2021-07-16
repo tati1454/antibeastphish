@@ -19,6 +19,9 @@ async function resolveUrlIp(input) {
     const inputUrl = new URL("/", input)
 
     let address = await dns.resolve4(inputUrl.hostname)
+        .catch(() => {});
+
+    if(!address) return null;
 
     return address[0]
 }
@@ -32,9 +35,13 @@ async function isBeastPhishUrl(urlString) {
 async function analyzeMessage(text) {
     urls = getUrlsInString(text)
 
+    if(!urls) return false;
+
     for(const url of urls){
         if(await isBeastPhishUrl(url)) return true;
     }
 
     return false;
 }
+
+module.exports = {analyzeMessage}
