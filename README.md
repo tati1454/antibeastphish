@@ -1,9 +1,9 @@
 # Antibeastphish discord bot.
 
 ## What is Beastphish?
-Beastphish is a phishing campaign that started in early 2021, in which people are recruited to buy domains and bind them to IPs where the phishing servers are hosted \
-and then these people have to share their link to the phishing and try to steal as many accounts as possible. In return, they make a profit from selling the accounts \
-and the recruits get a commission from these profits.
+Beastphish is a phishing campaign that started in early 2021. Its objective its to recruite people that shares a link that points to the phishing website. \
+These recruits buy domains and bind them to the IP of the phishing website, then they share the link and try to scam people, depending on the amount of people they scammed they get a reward.
 
 ## What does this bot do?
-What this bot does is to look for URLs that point to some of the beastphish phishing websites IP addresses and then ban the user who sent the message and delete the message.
+Some of the recruits are using discord as a way of sharing its links, so the objective of the bot is to look for messages with URLs that point to some of the beastphish websites based on\ 
+the IP address the domain its binded to and then delete the message.
